@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
         opcoesDeAcessibilidade.classList.toggle('apresenta-lista');
     });
 
+    const botaoSelecionado = botaoDeAcessibilidade.getAttribute ('aria-label') === 'true';
+    botaoDeAcessibilidade.setAttribute ('aria-expanded', !botaoSelecionado);
+
     const aumentaFonteBotao = document.getElementById('aumentar-fonte');
     const diminuiFonteBotao = document.getElementById('diminuir-fonte');
 
